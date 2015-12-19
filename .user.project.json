@@ -1,0 +1,19 @@
+{
+  "run": [
+    {
+      "filePath": "/MortalOnline_SkillPlanner/webapp/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "workspace": "withoutWorkspace",
+      "urlParameters": null,
+      "backendSystem": [],
+      "_metadata": {
+        "runnerId": "qunitrunner",
+        "id": 5737905,
+        "displayName": "New Unit Test 5"
+      }
+    }
+  ]
+}

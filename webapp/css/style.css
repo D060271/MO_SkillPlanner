@@ -1,0 +1,5 @@
+.sap-desktop .sapMShellCentralBox {
+	margin-left: -250px !important; 
+    left: 50% !important;
+	max-width: 500px !important;
+}

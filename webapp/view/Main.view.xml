@@ -1,0 +1,44 @@
+<mvc:View controllerName="mo.skillplanner.controller.Main" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table items="{path : 'skills>/skills', sorter : { path : 'group', group : true }}">
+						<columns>
+							<Column width="4.5em">
+								<Text text="Name"/>
+							</Column>
+							<Column width="3.9em">
+								<Text text="Trained Skill"/>
+							</Column>
+							<Column width="3.9em">
+								<Text text="Effective Skill"/>
+							</Column>
+							<Column width="2em"/>
+							<Column width="2em"/>
+							<Column></Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{skills>name}"/>
+									<ObjectNumber number="{skills>trained}" numberUnit="trained"/>
+									<ObjectNumber number="{path: 'skills>', formatter: '.formatter.effectiveSkill'}" numberUnit="effective"/>
+									<Button icon="sap-icon://add" press="onAddButtonPress"/>
+									<Button icon="sap-icon://less" press="onLessButtonPress"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<Label text="Remaining Skillpoints:"/>
+						<Label id="remainingPointsLabel" design="Bold" text="{path: 'skills>/skills', formatter: '.formatter.remainingSkillpoints'}"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
